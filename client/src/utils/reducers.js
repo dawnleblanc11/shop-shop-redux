@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+
 import {
   UPDATE_PRODUCTS,
   ADD_TO_CART,
@@ -10,6 +10,14 @@ import {
   CLEAR_CART,
   TOGGLE_CART
 } from "./actions";
+
+const appState = {
+  products:[],
+  cart:[],
+  cartOpen: false,
+  categories: [],
+  currentCategory: ''
+}
 
 export const reducer = (state, action) => {
   switch (action.type) {
@@ -85,6 +93,6 @@ export const reducer = (state, action) => {
   }
 };
 
-export function useProductReducer(initialState) {
-  return useReducer(reducer, initialState)
-}
+// export function useProductReducer(initialState) {
+//   return useReducer(reducer, initialState)
+// }
