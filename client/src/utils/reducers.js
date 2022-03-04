@@ -19,7 +19,7 @@ const appState = {
   currentCategory: ''
 }
 
-export const reducer = (state, action) => {
+export const reducer = (state = appState, action) => {
   switch (action.type) {
     case UPDATE_PRODUCTS:
       return {
